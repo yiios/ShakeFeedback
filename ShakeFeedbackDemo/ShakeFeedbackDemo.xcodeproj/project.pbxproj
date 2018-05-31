@@ -1,0 +1,949 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3D1437A620C02BAA00F11357 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D1437A520C02BAA00F11357 /* AppDelegate.m */; };
+		3D1437A920C02BAA00F11357 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D1437A820C02BAA00F11357 /* ViewController.m */; };
+		3D1437AC20C02BAA00F11357 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D1437AA20C02BAA00F11357 /* Main.storyboard */; };
+		3D1437AF20C02BAA00F11357 /* ShakeFeedbackDemo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3D1437AD20C02BAA00F11357 /* ShakeFeedbackDemo.xcdatamodeld */; };
+		3D1437B120C02BAA00F11357 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D1437B020C02BAA00F11357 /* Assets.xcassets */; };
+		3D1437B420C02BAA00F11357 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D1437B220C02BAA00F11357 /* LaunchScreen.storyboard */; };
+		3D1437B720C02BAA00F11357 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D1437B620C02BAA00F11357 /* main.m */; };
+		3D1437C120C02BAA00F11357 /* ShakeFeedbackDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D1437C020C02BAA00F11357 /* ShakeFeedbackDemoTests.m */; };
+		3D1437CC20C02BAA00F11357 /* ShakeFeedbackDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D1437CB20C02BAA00F11357 /* ShakeFeedbackDemoUITests.m */; };
+		3D14380620C02BB700F11357 /* LMHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D1437DD20C02BB700F11357 /* LMHeadView.m */; };
+		3D14380720C02BB700F11357 /* LMNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D1437DF20C02BB700F11357 /* LMNavigationController.m */; };
+		3D14380820C02BB700F11357 /* LMShakeFeedback.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3D1437E020C02BB700F11357 /* LMShakeFeedback.strings */; };
+		3D14380920C02BB700F11357 /* NSLayoutConstraintOnePixelLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D1437E220C02BB700F11357 /* NSLayoutConstraintOnePixelLine.m */; };
+		3D14380A20C02BB700F11357 /* FSTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D1437E520C02BB700F11357 /* FSTextView.m */; };
+		3D14380B20C02BB700F11357 /* HQFontImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D1437E920C02BB700F11357 /* HQFontImage.m */; };
+		3D14380C20C02BB700F11357 /* TBCityIconFont.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D1437EB20C02BB700F11357 /* TBCityIconFont.m */; };
+		3D14380D20C02BB700F11357 /* TBCityIconInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D1437ED20C02BB700F11357 /* TBCityIconInfo.m */; };
+		3D14380E20C02BB700F11357 /* UIImage+TBCityIconFont.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D1437EF20C02BB700F11357 /* UIImage+TBCityIconFont.m */; };
+		3D14380F20C02BB700F11357 /* iconfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3D1437F020C02BB700F11357 /* iconfont.ttf */; };
+		3D14381020C02BB700F11357 /* LMFontImageList.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D1437F220C02BB700F11357 /* LMFontImageList.m */; };
+		3D14381120C02BB700F11357 /* LMDrawBoarderController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D1437F520C02BB700F11357 /* LMDrawBoarderController.m */; };
+		3D14381220C02BB700F11357 /* LMMyDrawer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D1437F720C02BB700F11357 /* LMMyDrawer.m */; };
+		3D14381320C02BB700F11357 /* LMFeedbackController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D1437FA20C02BB700F11357 /* LMFeedbackController.m */; };
+		3D14381420C02BB700F11357 /* LMFeedbackController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D1437FB20C02BB700F11357 /* LMFeedbackController.storyboard */; };
+		3D14381520C02BB700F11357 /* LMFeedbackMediaCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D1437FD20C02BB700F11357 /* LMFeedbackMediaCell.m */; };
+		3D14381620C02BB700F11357 /* LMFeedbackMediaModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D1437FF20C02BB700F11357 /* LMFeedbackMediaModel.m */; };
+		3D14381720C02BB700F11357 /* LMLevitateButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D14380120C02BB700F11357 /* LMLevitateButton.m */; };
+		3D14381820C02BB700F11357 /* LMFeedbackManage.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D14380320C02BB700F11357 /* LMFeedbackManage.m */; };
+		3D14381920C02BB700F11357 /* UIViewController+ShakeFeedback.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D14380520C02BB700F11357 /* UIViewController+ShakeFeedback.m */; };
+		A3D031054D4BCFA9D2C7EC39 /* libPods-ShakeFeedbackDemoUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EDD43B38543DDB350F3F3F04 /* libPods-ShakeFeedbackDemoUITests.a */; };
+		B5E0D2E4B5B17C7860524A3C /* libPods-ShakeFeedbackDemoTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DDE6B6822532E773B859E89 /* libPods-ShakeFeedbackDemoTests.a */; };
+		C0ABF4D0C7BB29DEA640AC01 /* libPods-ShakeFeedbackDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 93119BF0D574B382A642E815 /* libPods-ShakeFeedbackDemo.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3D1437BD20C02BAA00F11357 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3D14379920C02BAA00F11357 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3D1437A020C02BAA00F11357;
+			remoteInfo = ShakeFeedbackDemo;
+		};
+		3D1437C820C02BAA00F11357 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3D14379920C02BAA00F11357 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3D1437A020C02BAA00F11357;
+			remoteInfo = ShakeFeedbackDemo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3D1437A120C02BAA00F11357 /* ShakeFeedbackDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShakeFeedbackDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3D1437A420C02BAA00F11357 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		3D1437A520C02BAA00F11357 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		3D1437A720C02BAA00F11357 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		3D1437A820C02BAA00F11357 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		3D1437AB20C02BAA00F11357 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3D1437AE20C02BAA00F11357 /* ShakeFeedbackDemo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ShakeFeedbackDemo.xcdatamodel; sourceTree = "<group>"; };
+		3D1437B020C02BAA00F11357 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3D1437B320C02BAA00F11357 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3D1437B520C02BAA00F11357 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3D1437B620C02BAA00F11357 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3D1437BC20C02BAA00F11357 /* ShakeFeedbackDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShakeFeedbackDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3D1437C020C02BAA00F11357 /* ShakeFeedbackDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShakeFeedbackDemoTests.m; sourceTree = "<group>"; };
+		3D1437C220C02BAA00F11357 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3D1437C720C02BAA00F11357 /* ShakeFeedbackDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShakeFeedbackDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3D1437CB20C02BAA00F11357 /* ShakeFeedbackDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShakeFeedbackDemoUITests.m; sourceTree = "<group>"; };
+		3D1437CD20C02BAA00F11357 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3D1437DB20C02BB700F11357 /* LMFeedbackDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMFeedbackDefine.h; sourceTree = "<group>"; };
+		3D1437DC20C02BB700F11357 /* LMHeadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMHeadView.h; sourceTree = "<group>"; };
+		3D1437DD20C02BB700F11357 /* LMHeadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMHeadView.m; sourceTree = "<group>"; };
+		3D1437DE20C02BB700F11357 /* LMNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMNavigationController.h; sourceTree = "<group>"; };
+		3D1437DF20C02BB700F11357 /* LMNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMNavigationController.m; sourceTree = "<group>"; };
+		3D1437E020C02BB700F11357 /* LMShakeFeedback.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = LMShakeFeedback.strings; sourceTree = "<group>"; };
+		3D1437E120C02BB700F11357 /* NSLayoutConstraintOnePixelLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSLayoutConstraintOnePixelLine.h; sourceTree = "<group>"; };
+		3D1437E220C02BB700F11357 /* NSLayoutConstraintOnePixelLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSLayoutConstraintOnePixelLine.m; sourceTree = "<group>"; };
+		3D1437E420C02BB700F11357 /* FSTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSTextView.h; sourceTree = "<group>"; };
+		3D1437E520C02BB700F11357 /* FSTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSTextView.m; sourceTree = "<group>"; };
+		3D1437E820C02BB700F11357 /* HQFontImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HQFontImage.h; sourceTree = "<group>"; };
+		3D1437E920C02BB700F11357 /* HQFontImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HQFontImage.m; sourceTree = "<group>"; };
+		3D1437EA20C02BB700F11357 /* TBCityIconFont.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBCityIconFont.h; sourceTree = "<group>"; };
+		3D1437EB20C02BB700F11357 /* TBCityIconFont.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBCityIconFont.m; sourceTree = "<group>"; };
+		3D1437EC20C02BB700F11357 /* TBCityIconInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBCityIconInfo.h; sourceTree = "<group>"; };
+		3D1437ED20C02BB700F11357 /* TBCityIconInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBCityIconInfo.m; sourceTree = "<group>"; };
+		3D1437EE20C02BB700F11357 /* UIImage+TBCityIconFont.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+TBCityIconFont.h"; sourceTree = "<group>"; };
+		3D1437EF20C02BB700F11357 /* UIImage+TBCityIconFont.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+TBCityIconFont.m"; sourceTree = "<group>"; };
+		3D1437F020C02BB700F11357 /* iconfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = iconfont.ttf; sourceTree = "<group>"; };
+		3D1437F120C02BB700F11357 /* LMFontImageList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMFontImageList.h; sourceTree = "<group>"; };
+		3D1437F220C02BB700F11357 /* LMFontImageList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMFontImageList.m; sourceTree = "<group>"; };
+		3D1437F420C02BB700F11357 /* LMDrawBoarderController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMDrawBoarderController.h; sourceTree = "<group>"; };
+		3D1437F520C02BB700F11357 /* LMDrawBoarderController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMDrawBoarderController.m; sourceTree = "<group>"; };
+		3D1437F620C02BB700F11357 /* LMMyDrawer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMMyDrawer.h; sourceTree = "<group>"; };
+		3D1437F720C02BB700F11357 /* LMMyDrawer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMMyDrawer.m; sourceTree = "<group>"; };
+		3D1437F920C02BB700F11357 /* LMFeedbackController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMFeedbackController.h; sourceTree = "<group>"; };
+		3D1437FA20C02BB700F11357 /* LMFeedbackController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMFeedbackController.m; sourceTree = "<group>"; };
+		3D1437FB20C02BB700F11357 /* LMFeedbackController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LMFeedbackController.storyboard; sourceTree = "<group>"; };
+		3D1437FC20C02BB700F11357 /* LMFeedbackMediaCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMFeedbackMediaCell.h; sourceTree = "<group>"; };
+		3D1437FD20C02BB700F11357 /* LMFeedbackMediaCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMFeedbackMediaCell.m; sourceTree = "<group>"; };
+		3D1437FE20C02BB700F11357 /* LMFeedbackMediaModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMFeedbackMediaModel.h; sourceTree = "<group>"; };
+		3D1437FF20C02BB700F11357 /* LMFeedbackMediaModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMFeedbackMediaModel.m; sourceTree = "<group>"; };
+		3D14380020C02BB700F11357 /* LMLevitateButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMLevitateButton.h; sourceTree = "<group>"; };
+		3D14380120C02BB700F11357 /* LMLevitateButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMLevitateButton.m; sourceTree = "<group>"; };
+		3D14380220C02BB700F11357 /* LMFeedbackManage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMFeedbackManage.h; sourceTree = "<group>"; };
+		3D14380320C02BB700F11357 /* LMFeedbackManage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMFeedbackManage.m; sourceTree = "<group>"; };
+		3D14380420C02BB700F11357 /* UIViewController+ShakeFeedback.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+ShakeFeedback.h"; sourceTree = "<group>"; };
+		3D14380520C02BB700F11357 /* UIViewController+ShakeFeedback.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+ShakeFeedback.m"; sourceTree = "<group>"; };
+		447D145367D49A8CD303685C /* Pods-ShakeFeedbackDemoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShakeFeedbackDemoUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ShakeFeedbackDemoUITests/Pods-ShakeFeedbackDemoUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		57F5C49BF62E8B0011BB2488 /* Pods-ShakeFeedbackDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShakeFeedbackDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-ShakeFeedbackDemo/Pods-ShakeFeedbackDemo.release.xcconfig"; sourceTree = "<group>"; };
+		7DDE6B6822532E773B859E89 /* libPods-ShakeFeedbackDemoTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ShakeFeedbackDemoTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7FF7D6D982446029AEF4472A /* Pods-ShakeFeedbackDemoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShakeFeedbackDemoUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ShakeFeedbackDemoUITests/Pods-ShakeFeedbackDemoUITests.release.xcconfig"; sourceTree = "<group>"; };
+		93119BF0D574B382A642E815 /* libPods-ShakeFeedbackDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ShakeFeedbackDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B3C8418FB2F44E3ABDE51679 /* Pods-ShakeFeedbackDemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShakeFeedbackDemoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ShakeFeedbackDemoTests/Pods-ShakeFeedbackDemoTests.debug.xcconfig"; sourceTree = "<group>"; };
+		C1A8B3395650CD254E023FAD /* Pods-ShakeFeedbackDemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShakeFeedbackDemoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ShakeFeedbackDemoTests/Pods-ShakeFeedbackDemoTests.release.xcconfig"; sourceTree = "<group>"; };
+		C46F04634C54B67F068C42EB /* Pods-ShakeFeedbackDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShakeFeedbackDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ShakeFeedbackDemo/Pods-ShakeFeedbackDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		EDD43B38543DDB350F3F3F04 /* libPods-ShakeFeedbackDemoUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ShakeFeedbackDemoUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3D14379E20C02BAA00F11357 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C0ABF4D0C7BB29DEA640AC01 /* libPods-ShakeFeedbackDemo.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3D1437B920C02BAA00F11357 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B5E0D2E4B5B17C7860524A3C /* libPods-ShakeFeedbackDemoTests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3D1437C420C02BAA00F11357 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A3D031054D4BCFA9D2C7EC39 /* libPods-ShakeFeedbackDemoUITests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		177D67B64FB1A36F64686FB4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				93119BF0D574B382A642E815 /* libPods-ShakeFeedbackDemo.a */,
+				7DDE6B6822532E773B859E89 /* libPods-ShakeFeedbackDemoTests.a */,
+				EDD43B38543DDB350F3F3F04 /* libPods-ShakeFeedbackDemoUITests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3D14379820C02BAA00F11357 = {
+			isa = PBXGroup;
+			children = (
+				3D1437D920C02BB700F11357 /* ShakeFeedback */,
+				3D1437A320C02BAA00F11357 /* ShakeFeedbackDemo */,
+				3D1437BF20C02BAA00F11357 /* ShakeFeedbackDemoTests */,
+				3D1437CA20C02BAA00F11357 /* ShakeFeedbackDemoUITests */,
+				3D1437A220C02BAA00F11357 /* Products */,
+				7281DD114FF407F4A2FC2361 /* Pods */,
+				177D67B64FB1A36F64686FB4 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		3D1437A220C02BAA00F11357 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3D1437A120C02BAA00F11357 /* ShakeFeedbackDemo.app */,
+				3D1437BC20C02BAA00F11357 /* ShakeFeedbackDemoTests.xctest */,
+				3D1437C720C02BAA00F11357 /* ShakeFeedbackDemoUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3D1437A320C02BAA00F11357 /* ShakeFeedbackDemo */ = {
+			isa = PBXGroup;
+			children = (
+				3D1437A420C02BAA00F11357 /* AppDelegate.h */,
+				3D1437A520C02BAA00F11357 /* AppDelegate.m */,
+				3D1437A720C02BAA00F11357 /* ViewController.h */,
+				3D1437A820C02BAA00F11357 /* ViewController.m */,
+				3D1437AA20C02BAA00F11357 /* Main.storyboard */,
+				3D1437B020C02BAA00F11357 /* Assets.xcassets */,
+				3D1437B220C02BAA00F11357 /* LaunchScreen.storyboard */,
+				3D1437B520C02BAA00F11357 /* Info.plist */,
+				3D1437B620C02BAA00F11357 /* main.m */,
+				3D1437AD20C02BAA00F11357 /* ShakeFeedbackDemo.xcdatamodeld */,
+			);
+			path = ShakeFeedbackDemo;
+			sourceTree = "<group>";
+		};
+		3D1437BF20C02BAA00F11357 /* ShakeFeedbackDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				3D1437C020C02BAA00F11357 /* ShakeFeedbackDemoTests.m */,
+				3D1437C220C02BAA00F11357 /* Info.plist */,
+			);
+			path = ShakeFeedbackDemoTests;
+			sourceTree = "<group>";
+		};
+		3D1437CA20C02BAA00F11357 /* ShakeFeedbackDemoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				3D1437CB20C02BAA00F11357 /* ShakeFeedbackDemoUITests.m */,
+				3D1437CD20C02BAA00F11357 /* Info.plist */,
+			);
+			path = ShakeFeedbackDemoUITests;
+			sourceTree = "<group>";
+		};
+		3D1437D920C02BB700F11357 /* ShakeFeedback */ = {
+			isa = PBXGroup;
+			children = (
+				3D1437DA20C02BB700F11357 /* Common */,
+				3D1437E320C02BB700F11357 /* FSTextView */,
+				3D1437E620C02BB700F11357 /* Icon */,
+				3D1437F320C02BB700F11357 /* LMDrawBoarder */,
+				3D1437F820C02BB700F11357 /* LMFeedback */,
+				3D14380220C02BB700F11357 /* LMFeedbackManage.h */,
+				3D14380320C02BB700F11357 /* LMFeedbackManage.m */,
+				3D14380420C02BB700F11357 /* UIViewController+ShakeFeedback.h */,
+				3D14380520C02BB700F11357 /* UIViewController+ShakeFeedback.m */,
+			);
+			name = ShakeFeedback;
+			path = ../ShakeFeedback;
+			sourceTree = "<group>";
+		};
+		3D1437DA20C02BB700F11357 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				3D1437DB20C02BB700F11357 /* LMFeedbackDefine.h */,
+				3D1437DC20C02BB700F11357 /* LMHeadView.h */,
+				3D1437DD20C02BB700F11357 /* LMHeadView.m */,
+				3D1437DE20C02BB700F11357 /* LMNavigationController.h */,
+				3D1437DF20C02BB700F11357 /* LMNavigationController.m */,
+				3D1437E020C02BB700F11357 /* LMShakeFeedback.strings */,
+				3D1437E120C02BB700F11357 /* NSLayoutConstraintOnePixelLine.h */,
+				3D1437E220C02BB700F11357 /* NSLayoutConstraintOnePixelLine.m */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		3D1437E320C02BB700F11357 /* FSTextView */ = {
+			isa = PBXGroup;
+			children = (
+				3D1437E420C02BB700F11357 /* FSTextView.h */,
+				3D1437E520C02BB700F11357 /* FSTextView.m */,
+			);
+			path = FSTextView;
+			sourceTree = "<group>";
+		};
+		3D1437E620C02BB700F11357 /* Icon */ = {
+			isa = PBXGroup;
+			children = (
+				3D1437E720C02BB700F11357 /* IconFont */,
+				3D1437F020C02BB700F11357 /* iconfont.ttf */,
+				3D1437F120C02BB700F11357 /* LMFontImageList.h */,
+				3D1437F220C02BB700F11357 /* LMFontImageList.m */,
+			);
+			path = Icon;
+			sourceTree = "<group>";
+		};
+		3D1437E720C02BB700F11357 /* IconFont */ = {
+			isa = PBXGroup;
+			children = (
+				3D1437E820C02BB700F11357 /* HQFontImage.h */,
+				3D1437E920C02BB700F11357 /* HQFontImage.m */,
+				3D1437EA20C02BB700F11357 /* TBCityIconFont.h */,
+				3D1437EB20C02BB700F11357 /* TBCityIconFont.m */,
+				3D1437EC20C02BB700F11357 /* TBCityIconInfo.h */,
+				3D1437ED20C02BB700F11357 /* TBCityIconInfo.m */,
+				3D1437EE20C02BB700F11357 /* UIImage+TBCityIconFont.h */,
+				3D1437EF20C02BB700F11357 /* UIImage+TBCityIconFont.m */,
+			);
+			path = IconFont;
+			sourceTree = "<group>";
+		};
+		3D1437F320C02BB700F11357 /* LMDrawBoarder */ = {
+			isa = PBXGroup;
+			children = (
+				3D1437F420C02BB700F11357 /* LMDrawBoarderController.h */,
+				3D1437F520C02BB700F11357 /* LMDrawBoarderController.m */,
+				3D1437F620C02BB700F11357 /* LMMyDrawer.h */,
+				3D1437F720C02BB700F11357 /* LMMyDrawer.m */,
+			);
+			path = LMDrawBoarder;
+			sourceTree = "<group>";
+		};
+		3D1437F820C02BB700F11357 /* LMFeedback */ = {
+			isa = PBXGroup;
+			children = (
+				3D1437F920C02BB700F11357 /* LMFeedbackController.h */,
+				3D1437FA20C02BB700F11357 /* LMFeedbackController.m */,
+				3D1437FB20C02BB700F11357 /* LMFeedbackController.storyboard */,
+				3D1437FC20C02BB700F11357 /* LMFeedbackMediaCell.h */,
+				3D1437FD20C02BB700F11357 /* LMFeedbackMediaCell.m */,
+				3D1437FE20C02BB700F11357 /* LMFeedbackMediaModel.h */,
+				3D1437FF20C02BB700F11357 /* LMFeedbackMediaModel.m */,
+				3D14380020C02BB700F11357 /* LMLevitateButton.h */,
+				3D14380120C02BB700F11357 /* LMLevitateButton.m */,
+			);
+			path = LMFeedback;
+			sourceTree = "<group>";
+		};
+		7281DD114FF407F4A2FC2361 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C46F04634C54B67F068C42EB /* Pods-ShakeFeedbackDemo.debug.xcconfig */,
+				57F5C49BF62E8B0011BB2488 /* Pods-ShakeFeedbackDemo.release.xcconfig */,
+				B3C8418FB2F44E3ABDE51679 /* Pods-ShakeFeedbackDemoTests.debug.xcconfig */,
+				C1A8B3395650CD254E023FAD /* Pods-ShakeFeedbackDemoTests.release.xcconfig */,
+				447D145367D49A8CD303685C /* Pods-ShakeFeedbackDemoUITests.debug.xcconfig */,
+				7FF7D6D982446029AEF4472A /* Pods-ShakeFeedbackDemoUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3D1437A020C02BAA00F11357 /* ShakeFeedbackDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3D1437D020C02BAA00F11357 /* Build configuration list for PBXNativeTarget "ShakeFeedbackDemo" */;
+			buildPhases = (
+				C609A92F3F456A728686B3B8 /* [CP] Check Pods Manifest.lock */,
+				3D14379D20C02BAA00F11357 /* Sources */,
+				3D14379E20C02BAA00F11357 /* Frameworks */,
+				3D14379F20C02BAA00F11357 /* Resources */,
+				FAFC25A46AB116DA5BE79CAF /* [CP] Embed Pods Frameworks */,
+				DB1F5DD898E7C9644542770C /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ShakeFeedbackDemo;
+			productName = ShakeFeedbackDemo;
+			productReference = 3D1437A120C02BAA00F11357 /* ShakeFeedbackDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3D1437BB20C02BAA00F11357 /* ShakeFeedbackDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3D1437D320C02BAA00F11357 /* Build configuration list for PBXNativeTarget "ShakeFeedbackDemoTests" */;
+			buildPhases = (
+				30C4F2203C1BDEED356A80A5 /* [CP] Check Pods Manifest.lock */,
+				3D1437B820C02BAA00F11357 /* Sources */,
+				3D1437B920C02BAA00F11357 /* Frameworks */,
+				3D1437BA20C02BAA00F11357 /* Resources */,
+				C9BF1335074E729526F10CAF /* [CP] Embed Pods Frameworks */,
+				517E5FB4CC6DBDF19AADD1B0 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3D1437BE20C02BAA00F11357 /* PBXTargetDependency */,
+			);
+			name = ShakeFeedbackDemoTests;
+			productName = ShakeFeedbackDemoTests;
+			productReference = 3D1437BC20C02BAA00F11357 /* ShakeFeedbackDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		3D1437C620C02BAA00F11357 /* ShakeFeedbackDemoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3D1437D620C02BAA00F11357 /* Build configuration list for PBXNativeTarget "ShakeFeedbackDemoUITests" */;
+			buildPhases = (
+				83F5A1BB4830221B91704AB9 /* [CP] Check Pods Manifest.lock */,
+				3D1437C320C02BAA00F11357 /* Sources */,
+				3D1437C420C02BAA00F11357 /* Frameworks */,
+				3D1437C520C02BAA00F11357 /* Resources */,
+				24D8E84651BC081144D6E82B /* [CP] Embed Pods Frameworks */,
+				5CCC75E25F46191127336631 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3D1437C920C02BAA00F11357 /* PBXTargetDependency */,
+			);
+			name = ShakeFeedbackDemoUITests;
+			productName = ShakeFeedbackDemoUITests;
+			productReference = 3D1437C720C02BAA00F11357 /* ShakeFeedbackDemoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3D14379920C02BAA00F11357 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0910;
+				ORGANIZATIONNAME = Limo;
+				TargetAttributes = {
+					3D1437A020C02BAA00F11357 = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+					};
+					3D1437BB20C02BAA00F11357 = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 3D1437A020C02BAA00F11357;
+					};
+					3D1437C620C02BAA00F11357 = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 3D1437A020C02BAA00F11357;
+					};
+				};
+			};
+			buildConfigurationList = 3D14379C20C02BAA00F11357 /* Build configuration list for PBXProject "ShakeFeedbackDemo" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3D14379820C02BAA00F11357;
+			productRefGroup = 3D1437A220C02BAA00F11357 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3D1437A020C02BAA00F11357 /* ShakeFeedbackDemo */,
+				3D1437BB20C02BAA00F11357 /* ShakeFeedbackDemoTests */,
+				3D1437C620C02BAA00F11357 /* ShakeFeedbackDemoUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3D14379F20C02BAA00F11357 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3D14381420C02BB700F11357 /* LMFeedbackController.storyboard in Resources */,
+				3D1437B420C02BAA00F11357 /* LaunchScreen.storyboard in Resources */,
+				3D14380820C02BB700F11357 /* LMShakeFeedback.strings in Resources */,
+				3D1437B120C02BAA00F11357 /* Assets.xcassets in Resources */,
+				3D14380F20C02BB700F11357 /* iconfont.ttf in Resources */,
+				3D1437AC20C02BAA00F11357 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3D1437BA20C02BAA00F11357 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3D1437C520C02BAA00F11357 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		24D8E84651BC081144D6E82B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ShakeFeedbackDemoUITests/Pods-ShakeFeedbackDemoUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		30C4F2203C1BDEED356A80A5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ShakeFeedbackDemoTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		517E5FB4CC6DBDF19AADD1B0 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ShakeFeedbackDemoTests/Pods-ShakeFeedbackDemoTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5CCC75E25F46191127336631 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ShakeFeedbackDemoUITests/Pods-ShakeFeedbackDemoUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		83F5A1BB4830221B91704AB9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ShakeFeedbackDemoUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C609A92F3F456A728686B3B8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ShakeFeedbackDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C9BF1335074E729526F10CAF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ShakeFeedbackDemoTests/Pods-ShakeFeedbackDemoTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DB1F5DD898E7C9644542770C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ShakeFeedbackDemo/Pods-ShakeFeedbackDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FAFC25A46AB116DA5BE79CAF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ShakeFeedbackDemo/Pods-ShakeFeedbackDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3D14379D20C02BAA00F11357 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3D14380A20C02BB700F11357 /* FSTextView.m in Sources */,
+				3D14380920C02BB700F11357 /* NSLayoutConstraintOnePixelLine.m in Sources */,
+				3D14381920C02BB700F11357 /* UIViewController+ShakeFeedback.m in Sources */,
+				3D14380620C02BB700F11357 /* LMHeadView.m in Sources */,
+				3D14381320C02BB700F11357 /* LMFeedbackController.m in Sources */,
+				3D14380D20C02BB700F11357 /* TBCityIconInfo.m in Sources */,
+				3D14380B20C02BB700F11357 /* HQFontImage.m in Sources */,
+				3D1437A920C02BAA00F11357 /* ViewController.m in Sources */,
+				3D14380720C02BB700F11357 /* LMNavigationController.m in Sources */,
+				3D14381620C02BB700F11357 /* LMFeedbackMediaModel.m in Sources */,
+				3D1437A620C02BAA00F11357 /* AppDelegate.m in Sources */,
+				3D14381120C02BB700F11357 /* LMDrawBoarderController.m in Sources */,
+				3D14381720C02BB700F11357 /* LMLevitateButton.m in Sources */,
+				3D14381020C02BB700F11357 /* LMFontImageList.m in Sources */,
+				3D1437B720C02BAA00F11357 /* main.m in Sources */,
+				3D14380C20C02BB700F11357 /* TBCityIconFont.m in Sources */,
+				3D14381520C02BB700F11357 /* LMFeedbackMediaCell.m in Sources */,
+				3D14381820C02BB700F11357 /* LMFeedbackManage.m in Sources */,
+				3D14381220C02BB700F11357 /* LMMyDrawer.m in Sources */,
+				3D14380E20C02BB700F11357 /* UIImage+TBCityIconFont.m in Sources */,
+				3D1437AF20C02BAA00F11357 /* ShakeFeedbackDemo.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3D1437B820C02BAA00F11357 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3D1437C120C02BAA00F11357 /* ShakeFeedbackDemoTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3D1437C320C02BAA00F11357 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3D1437CC20C02BAA00F11357 /* ShakeFeedbackDemoUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3D1437BE20C02BAA00F11357 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3D1437A020C02BAA00F11357 /* ShakeFeedbackDemo */;
+			targetProxy = 3D1437BD20C02BAA00F11357 /* PBXContainerItemProxy */;
+		};
+		3D1437C920C02BAA00F11357 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3D1437A020C02BAA00F11357 /* ShakeFeedbackDemo */;
+			targetProxy = 3D1437C820C02BAA00F11357 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		3D1437AA20C02BAA00F11357 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3D1437AB20C02BAA00F11357 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		3D1437B220C02BAA00F11357 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3D1437B320C02BAA00F11357 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3D1437CE20C02BAA00F11357 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		3D1437CF20C02BAA00F11357 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3D1437D120C02BAA00F11357 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C46F04634C54B67F068C42EB /* Pods-ShakeFeedbackDemo.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KSWZ74HQSF;
+				INFOPLIST_FILE = ShakeFeedbackDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yiios.ShakeFeedbackDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3D1437D220C02BAA00F11357 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 57F5C49BF62E8B0011BB2488 /* Pods-ShakeFeedbackDemo.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KSWZ74HQSF;
+				INFOPLIST_FILE = ShakeFeedbackDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yiios.ShakeFeedbackDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		3D1437D420C02BAA00F11357 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B3C8418FB2F44E3ABDE51679 /* Pods-ShakeFeedbackDemoTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KSWZ74HQSF;
+				INFOPLIST_FILE = ShakeFeedbackDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yiios.ShakeFeedbackDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ShakeFeedbackDemo.app/ShakeFeedbackDemo";
+			};
+			name = Debug;
+		};
+		3D1437D520C02BAA00F11357 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C1A8B3395650CD254E023FAD /* Pods-ShakeFeedbackDemoTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KSWZ74HQSF;
+				INFOPLIST_FILE = ShakeFeedbackDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yiios.ShakeFeedbackDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ShakeFeedbackDemo.app/ShakeFeedbackDemo";
+			};
+			name = Release;
+		};
+		3D1437D720C02BAA00F11357 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 447D145367D49A8CD303685C /* Pods-ShakeFeedbackDemoUITests.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KSWZ74HQSF;
+				INFOPLIST_FILE = ShakeFeedbackDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yiios.ShakeFeedbackDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ShakeFeedbackDemo;
+			};
+			name = Debug;
+		};
+		3D1437D820C02BAA00F11357 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7FF7D6D982446029AEF4472A /* Pods-ShakeFeedbackDemoUITests.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KSWZ74HQSF;
+				INFOPLIST_FILE = ShakeFeedbackDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yiios.ShakeFeedbackDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ShakeFeedbackDemo;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3D14379C20C02BAA00F11357 /* Build configuration list for PBXProject "ShakeFeedbackDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3D1437CE20C02BAA00F11357 /* Debug */,
+				3D1437CF20C02BAA00F11357 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3D1437D020C02BAA00F11357 /* Build configuration list for PBXNativeTarget "ShakeFeedbackDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3D1437D120C02BAA00F11357 /* Debug */,
+				3D1437D220C02BAA00F11357 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3D1437D320C02BAA00F11357 /* Build configuration list for PBXNativeTarget "ShakeFeedbackDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3D1437D420C02BAA00F11357 /* Debug */,
+				3D1437D520C02BAA00F11357 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3D1437D620C02BAA00F11357 /* Build configuration list for PBXNativeTarget "ShakeFeedbackDemoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3D1437D720C02BAA00F11357 /* Debug */,
+				3D1437D820C02BAA00F11357 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		3D1437AD20C02BAA00F11357 /* ShakeFeedbackDemo.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				3D1437AE20C02BAA00F11357 /* ShakeFeedbackDemo.xcdatamodel */,
+			);
+			currentVersion = 3D1437AE20C02BAA00F11357 /* ShakeFeedbackDemo.xcdatamodel */;
+			path = ShakeFeedbackDemo.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 3D14379920C02BAA00F11357 /* Project object */;
+}
