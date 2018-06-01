@@ -1,5 +1,28 @@
-language: objective-c
 osx_image: xcode9.1
+language: objective-c
+
 xcode_workspace: ShakeFeedbackDemo/ShakeFeedbackDemo.xcworkspace
 xcode_scheme: ShakeFeedbackDemoTests
+
+cache: cocoapods
 podfile: ShakeFeedbackDemo/Podfile
+
+before_install:
+- gem install xcpretty --no-rdoc --no-ri --no-document --quiet
+- gem install cocoapods --pre --no-rdoc --no-ri --no-document --quiet
+#- gem install slather --pre --no-rdoc --no-ri --no-document --quiet
+- pod install --project-directory=ShakeFeedbackDemo
+- rvm use $RVM_RUBY_VERSION
+
+script:
+- set -o pipefail
+- echo $WORKSPACE_NAME
+- xcodebuild -workspace "$XCODE_WORKSPACE" -scheme "$SCHEME" -configuration Debug clean build CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO | xcpretty -c
+#- xcodebuild -workspace "$XCODE_WORKSPACE" -scheme "$SCHEME" -configuration Release clean build CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO | xcpretty -c
+#- xcodebuild test -enableCodeCoverage YES -workspace ShakeFeedbackDemo/$WORKSPACE_NAME.xcworkspace -scheme $WORKSPACE_NAME-Example -destination 'platform=iOS Simulator,OS=latest,name=iPhone 8'  -destination 'platform=iOS Simulator,OS=10.3.1,name=iPhone 7' -destination 'platform=iOS Simulator,OS=9.3,name=iPhone 6s'
+- pod lib lint --allow-warnings --verbose
+
+after_success:
+- slather
+- bash <(curl -s https://codecov.io/bash) #-f ShakeFeedbackDemo/cobertura.xml -X coveragepy -X gcov -X xcode -t
+- sleep 3
