@@ -33,6 +33,7 @@
 @implementation LMMyDrawer
 
 #pragma mark -leftcycle
+
 - (instancetype)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
@@ -98,9 +99,7 @@
 }
 
 
-/**
- *  画线
- */
+/**  画线 */
 - (void)drawLine {
 
     [self.layer addSublayer:self.lines.lastObject];
@@ -108,9 +107,7 @@
 }
 
 
-/**
- *  清屏
- */
+/** 清屏 */
 - (void)clearScreen {
     
     if (!self.lines.count) return ;
@@ -121,9 +118,7 @@
 
 }
 
-/**
- *  撤销
- */
+/**  撤销 */
 - (void)undo {
     //当前屏幕已经清空，就不能撤销了
     if (!self.lines.count) return;
@@ -134,9 +129,7 @@
 }
 
 
-/**
- *  恢复
- */
+/**  恢复 */
 - (void)redo {
     //当没有做过撤销操作，就不能恢复了
     if (!self.canceledLines.count) return;

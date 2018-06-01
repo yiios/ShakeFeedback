@@ -31,10 +31,10 @@ Pod::Spec.new do |s|
 
   s.ios.deployment_target = '8.0'
 
-  s.source_files = 'ShakeFeedback/**/*'
+  s.source_files = 'ShakeFeedback/**/*.{h,m}'
   
   s.resource_bundles = {
-    'ShakeFeedback' => ['ShakeFeedback/**/*.{storyboard,xib,ttf}']
+    'ShakeFeedback' => ['ShakeFeedback/**/*.{storyboard,xib,ttf,strings}']
   }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'

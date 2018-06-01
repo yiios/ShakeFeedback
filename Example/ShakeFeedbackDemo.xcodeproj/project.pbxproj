@@ -30,12 +30,12 @@
 		3D14381120C02BB700F11357 /* LMDrawBoarderController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D1437F520C02BB700F11357 /* LMDrawBoarderController.m */; };
 		3D14381220C02BB700F11357 /* LMMyDrawer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D1437F720C02BB700F11357 /* LMMyDrawer.m */; };
 		3D14381320C02BB700F11357 /* LMFeedbackController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D1437FA20C02BB700F11357 /* LMFeedbackController.m */; };
-		3D14381420C02BB700F11357 /* LMFeedbackController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D1437FB20C02BB700F11357 /* LMFeedbackController.storyboard */; };
 		3D14381520C02BB700F11357 /* LMFeedbackMediaCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D1437FD20C02BB700F11357 /* LMFeedbackMediaCell.m */; };
 		3D14381620C02BB700F11357 /* LMFeedbackMediaModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D1437FF20C02BB700F11357 /* LMFeedbackMediaModel.m */; };
 		3D14381720C02BB700F11357 /* LMLevitateButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D14380120C02BB700F11357 /* LMLevitateButton.m */; };
 		3D14381820C02BB700F11357 /* LMFeedbackManage.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D14380320C02BB700F11357 /* LMFeedbackManage.m */; };
 		3D14381920C02BB700F11357 /* UIViewController+ShakeFeedback.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D14380520C02BB700F11357 /* UIViewController+ShakeFeedback.m */; };
+		3DE86AB020C108000042CA48 /* LMFeedbackController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D1437FB20C02BB700F11357 /* LMFeedbackController.storyboard */; };
 		A3D031054D4BCFA9D2C7EC39 /* libPods-ShakeFeedbackDemoUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EDD43B38543DDB350F3F3F04 /* libPods-ShakeFeedbackDemoUITests.a */; };
 		B5E0D2E4B5B17C7860524A3C /* libPods-ShakeFeedbackDemoTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DDE6B6822532E773B859E89 /* libPods-ShakeFeedbackDemoTests.a */; };
 		C0ABF4D0C7BB29DEA640AC01 /* libPods-ShakeFeedbackDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 93119BF0D574B382A642E815 /* libPods-ShakeFeedbackDemo.a */; };
@@ -443,7 +443,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3D14381420C02BB700F11357 /* LMFeedbackController.storyboard in Resources */,
+				3DE86AB020C108000042CA48 /* LMFeedbackController.storyboard in Resources */,
 				3D1437B420C02BAA00F11357 /* LaunchScreen.storyboard in Resources */,
 				3D14380820C02BB700F11357 /* LMShakeFeedback.strings in Resources */,
 				3D1437B120C02BAA00F11357 /* Assets.xcassets in Resources */,
@@ -813,6 +813,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.yiios.ShakeFeedbackDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALID_ARCHS = "arm64 armv7 armv7s i386 x86_64";
 			};
 			name = Debug;
 		};

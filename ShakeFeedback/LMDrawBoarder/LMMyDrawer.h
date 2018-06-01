@@ -30,8 +30,6 @@
 
 /**
  设置画笔颜色 、 默认黑色
-
- @param color 画笔颜色Color
  */
 @property (nonatomic, strong) UIColor *strokeColor;
 
