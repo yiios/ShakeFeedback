@@ -33,9 +33,9 @@ Pod::Spec.new do |s|
 
   s.source_files = 'ShakeFeedback/**/*'
   
-  # s.resource_bundles = {
-  #   'ShakeFeedback' => ['ShakeFeedback/Assets/*.png']
-  # }
+  s.resource_bundles = {
+    'ShakeFeedback' => ['ShakeFeedback/*.{storyboard,xib,ttf}']
+  }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   s.frameworks = 'UIKit', 'Foundation'
