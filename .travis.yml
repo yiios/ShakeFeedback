@@ -1,0 +1,4 @@
+language: objective-c
+xcode_workspace: ShakeFeedbackDemo.xcworkspace
+xcode_scheme: ShakeFeedbackDemoTests
+
