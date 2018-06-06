@@ -12,20 +12,22 @@
 
 @interface LMFeedbackManage : NSObject
 
-
 /** 是否正在反馈信息 */
 @property (nonatomic, assign, readonly) BOOL isStartFeedback;
 
-// 摇一摇反馈是否开启
+/** 摇一摇反馈是否开启 */
 @property (nonatomic, assign) BOOL isOpenLMShakeFeedback;
 
-// 显示与隐藏
+/** 显示与隐藏 */
 - (void)showFeedback;
 - (void)dismissFeedback;
 
-// 暂时隐藏与恢复显示
+/** 暂时隐藏与恢复显示 */
 - (void)tempDismissFeedback;
 - (void)restoreShowFeedbcak;
+
+/** 弹窗反馈提示视图 */
+- (void)showPromptView;
 
 - (void)feedbackMsgStr:(NSString *)msgStr andMediaModelArr:(NSArray <LMFeedbackMediaModel *>*)mediaModelArr;
 

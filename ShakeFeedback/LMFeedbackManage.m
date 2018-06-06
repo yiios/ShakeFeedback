@@ -11,7 +11,7 @@
 #import "LMDrawBoarderController.h"
 #import "LMFeedbackDefine.h"
 
-@interface LMFeedbackManage()
+@interface LMFeedbackManage()<UIAlertViewDelegate>
 
 // 新创建的Window
 @property (nonatomic, strong) UIWindow *window;
@@ -83,6 +83,36 @@ static LMFeedbackManage *_manage;
     self.window.hidden = NO;
 
     [self.window makeKeyAndVisible];
+}
+
+#pragma mark - PromptView
+
+- (void)showPromptView {
+    
+    if ([LMFeedbackManage shareManage].isStartFeedback == NO && [LMFeedbackManage shareManage].isOpenLMShakeFeedback == YES) {
+        _isStartFeedback = YES;
+        UIAlertView * alert = [[UIAlertView alloc]initWithTitle:NSLocalizedStringFromTable(@"invocationHeaderLabelText", @"LMShakeFeedback", nil) message:NSLocalizedStringFromTable(@"StartAlertTextIntro", @"LMShakeFeedback", nil) delegate:self cancelButtonTitle:@"没啥事" otherButtonTitles:@"遇到问题", @"关闭摇一摇反馈", nil];
+        [alert show];
+    }
+}
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+    _isStartFeedback = NO;
+
+    NSString *btnTitle = [alertView buttonTitleAtIndex:buttonIndex];
+    
+    if ([btnTitle isEqualToString:@"没啥事"]) {
+        
+    } else if ([btnTitle isEqualToString:@"遇到问题"]) {
+        [[LMFeedbackManage shareManage] showFeedback];
+    } else if ([btnTitle isEqualToString:@"关闭摇一摇反馈"]) {
+        
+        [LMFeedbackManage shareManage].isOpenLMShakeFeedback = NO;
+        
+        UIAlertView * alert = [[UIAlertView alloc]initWithTitle:@"已关闭摇一摇反馈" message:@"你可以在设置页面重新打开摇一摇反馈" delegate:self cancelButtonTitle:NSLocalizedStringFromTable(@"okButton", @"LMShakeFeedback", nil) otherButtonTitles:nil];
+        [alert show];
+    }
+    
 }
 
 

@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UIViewController (ShakeFeedback)<UIAlertViewDelegate>
+@interface UIViewController (ShakeFeedback)
 
 @end

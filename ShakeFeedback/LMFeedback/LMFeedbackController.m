@@ -25,7 +25,7 @@
 
 @property (nonatomic, strong) LMHeadView *headView;
 @property (nonatomic, strong) UIButton *cancelButton;// 取消按钮
-@property (nonatomic, strong) UIButton *endEditingButton;// 完成画板按钮
+@property (nonatomic, strong) UIButton *sendButton;// 完成画板按钮
 
 @property (weak, nonatomic) IBOutlet FSTextView *textView;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *textViewHeight;
@@ -73,6 +73,7 @@
     
     [self.pickPhotoButton setImage:[LMFontImageList iconWithName:@"pic_fill" fontSize:24 color:[UIColor darkGrayColor]] forState:UIControlStateNormal];
 
+    [self initToolbar];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -110,9 +111,9 @@
     [self.cancelButton addTarget:self action:@selector(cancelButtonClick) forControlEvents:UIControlEventTouchUpInside];
     [self.headView addSubview:self.cancelButton];
     
-    self.endEditingButton = [LMHeadView addRightButtonWithTitle:NSLocalizedStringFromTable(@"sendAccessbilityButton", @"LMShakeFeedback", nil)];
-    [self.endEditingButton addTarget:self action:@selector(endEditingButtonClick) forControlEvents:UIControlEventTouchUpInside];
-    [self.headView addSubview:self.endEditingButton];
+    self.sendButton = [LMHeadView addRightButtonWithTitle:NSLocalizedStringFromTable(@"sendAccessbilityButton", @"LMShakeFeedback", nil)];
+    [self.sendButton addTarget:self action:@selector(sendButtonClick) forControlEvents:UIControlEventTouchUpInside];
+    [self.headView addSubview:self.sendButton];
     
 }
 
@@ -139,6 +140,26 @@
     [self.collectionView reloadData];
 }
 
+- (void)initToolbar {
+    
+    UIToolbar *toolbar = [[UIToolbar alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.view.frame), 44)];
+    toolbar.tintColor = [UIColor colorWithRed:85./255 green:85./255 blue:85./255 alpha:1];
+    
+    UIButton *screenshotButton = [NSKeyedUnarchiver unarchiveObjectWithData:[NSKeyedArchiver archivedDataWithRootObject: self.screenshotButton]];
+    [screenshotButton addTarget:self action:@selector(screenshotButtonClick:) forControlEvents:UIControlEventTouchUpInside];
+    UIBarButtonItem *screenshotButtonItem = [[UIBarButtonItem alloc] initWithCustomView:screenshotButton];
+    UIButton *pickPhotoButton = [NSKeyedUnarchiver unarchiveObjectWithData:[NSKeyedArchiver archivedDataWithRootObject: self.pickPhotoButton]];
+    [pickPhotoButton addTarget:self action:@selector(pickPhotoButtonClick:) forControlEvents:UIControlEventTouchUpInside];
+    UIBarButtonItem *pickPhotoButtonItem = [[UIBarButtonItem alloc] initWithCustomView:pickPhotoButton];
+    
+    UIBarButtonItem *space = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
+    UIBarButtonItem *bar = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(endEditingButtonClick)];
+    toolbar.items = @[screenshotButtonItem, pickPhotoButtonItem, space, bar];
+    
+    
+    self.textView.inputAccessoryView = toolbar;
+
+}
 
 - (void)loadPickPhotoAction {
     
@@ -244,19 +265,32 @@
 //    [textView scrollRangeToVisible:textView.selectedRange]; // 不加这句也可以
 }
 
+//取消第一响应者
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+    [self.view endEditing:YES];
+}
+
 
 - (void)cancelButtonClick {
     // 关闭按钮
     [[LMFeedbackManage shareManage] dismissFeedback];
 }
 
+
+- (void)sendButtonClick {
+    
+    // 发送
+    [[LMFeedbackManage shareManage] feedbackMsgStr:self.textView.text andMediaModelArr:self.arrDataSources];
+
+}
+
 - (void)endEditingButtonClick {
     
-    // 完成编辑
-    
-    [[LMFeedbackManage shareManage] feedbackMsgStr:self.textView.text andMediaModelArr:self.arrDataSources];
+    [self.view endEditing:YES];
     
 }
+
+
 
 - (IBAction)screenshotButtonClick:(UIButton *)sender {
     // 截图
