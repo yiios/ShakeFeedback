@@ -2,6 +2,7 @@
 
 # ShakeFeedback
 [![CI Status](https://travis-ci.org/yiios/ShakeFeedback.svg?branch=master)](https://travis-ci.org/yiios/ShakeFeedback)
+[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![Version](https://img.shields.io/cocoapods/v/ShakeFeedback.svg?style=flat)](http://cocoapods.org/pods/ShakeFeedback)
 [![License](https://img.shields.io/cocoapods/l/ShakeFeedback.svg?style=flat)](http://cocoapods.org/pods/ShakeFeedback)
 [![Platform](https://img.shields.io/cocoapods/p/ShakeFeedback.svg?style=flat)](http://cocoapods.org/pods/ShakeFeedback)
