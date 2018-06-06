@@ -1,32 +1,39 @@
 osx_image: xcode9.1
 language: objective-c
-
 xcode_workspace: Example/ShakeFeedbackDemo.xcworkspace
 xcode_scheme: ShakeFeedbackDemo
-
 cache: cocoapods
 podfile: Example/Podfile
-
+env:
+  global:
+  - FRAMEWORK_NAME=<ShakeFeedback>
 before_install:
+- brew update
+- brew outdated carthage || brew upgrade carthage
 - gem install xcpretty --no-rdoc --no-ri --no-document --quiet
 - gem install cocoapods --pre --no-rdoc --no-ri --no-document --quiet
-#- gem install slather --pre --no-rdoc --no-ri --no-document --quiet
 - pod install --project-directory=Example
 - rvm use $RVM_RUBY_VERSION
-
+before_script: 
 script:
-- set -o pipefail && xcodebuild clean build test -enableCodeCoverage YES -workspace Example/ShakeFeedbackDemo.xcworkspace -scheme ShakeFeedbackDemo -sdk iphonesimulator11.1 -destination 'platform=iOS Simulator,name=iPhone 6,OS=11.1' ONLY_ACTIVE_ARCH=NO | xcpretty
-# 如果做了pod库之后 再把他打开
-#- pod lib lint --allow-warnings --verbose
-
-#- set -o pipefail
-#- echo $WORKSPACE_NAME
-#- xcodebuild -workspace "$XCODE_WORKSPACE" -scheme "$SCHEME" -configuration Debug clean build CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO | xcpretty -c
-#- xcodebuild -workspace "$XCODE_WORKSPACE" -scheme "$SCHEME" -configuration Release clean build CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO | xcpretty -c
-#- xcodebuild test -enableCodeCoverage YES -workspace Example/$WORKSPACE_NAME.xcworkspace -scheme $WORKSPACE_NAME-Example -destination 'platform=iOS Simulator,OS=latest,name=iPhone 8'  -destination 'platform=iOS Simulator,OS=10.3.1,name=iPhone 7' -destination 'platform=iOS Simulator,OS=9.3,name=iPhone 6s'
-#- pod lib lint --allow-warnings --verbose
-
+- set -o pipefail && xcodebuild clean build test -enableCodeCoverage YES -workspace
+  Example/ShakeFeedbackDemo.xcworkspace -scheme ShakeFeedbackDemo -sdk iphonesimulator11.1
+  -destination 'platform=iOS Simulator,name=iPhone 6,OS=11.1' ONLY_ACTIVE_ARCH=NO
+  | xcpretty
+- pod lib lint --allow-warnings --verbose
+before_deploy:
+- carthage build --no-skip-current
+- carthage archive $FRAMEWORK_NAME
 after_success:
 - slather
-- bash <(curl -s https://codecov.io/bash) #-f ShakeFeedbackDemo/cobertura.xml -X coveragepy -X gcov -X xcode -t
+- bash <(curl -s https://codecov.io/bash)
 - sleep 3
+deploy:
+  provider: releases
+  api_key:
+    secure: YCCA+7QdfB5vFHCfl+drq2xjVF4RHpUxpNVcYIK58lV8LHZ+nr9unIhVQ1YwIdEyFKXcdBUZXQz8yPS4M+CLHGpwOeedinMlFXII7JpjeSESEh6tC0eJx/oe9sgPOYwug9pjQ6hZywTvYh+3FgvngeIJ3Kb7x1gbmatyM7rDLddFQPLX0g3mK6HZvV1ZV9vwm7FLZxnDp04xJwg98KiQox3tEm14vQZfRa0SDNjUsg0IgFN9sAEHXFSSy96VR8kf61v2uaUo9kubAHsEPeM3AvRqmFenUOaOAcrmXItoRmE7Qlx01WRD2bqIj9eniyz1LLi8a01+slgKxWwCz/c5KbFH62JPbDCtKeumYj7BZ0W+kn1ABp5vL8jrlph5el8LPcJLD17IDYvAFTfWVhzpEFhou0Hpc5CsIO+hdpsa1WCCCx10WPhsxp3SQservIBlF0JWjdDwWLz1ygg1V+AYD+1OpHM7kz9Rbla3v8nFeE9USbnIHbg4rJutcKbhtFLn3AQxpoz/V90XjYgRnEs4bwRVIQbM5i2SqZGv9a3RsLDomjWFk2kAEQoSXobRoO+G90TuP5JSP+9Cik/lpN6brae0O+NAdSbHaM4A9cDouVJDTeLKl3K/88ZsyDGAvTuKJnuzMMkhm7qLVpRBjIvbnoaEj0fnu1fr69C9Zf/CREE=
+  file: "$FRAMEWORK_NAME.framework.zip"
+  skip_cleanup: true
+  on:
+    repo: yiios/ShakeFeedback
+    tags: true
